@@ -1,0 +1,1088 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Times, serif;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --main-color: #ff007f;
+  --cor-secundaria: #4a98b3;
+  --color-botao: #e7d800e5;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  background: #faf0e6;
+  height: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  transition: all 0.42s ease;
+  background-color: white;
+}
+
+header.sticky {
+  background: #ffffff;
+  padding: 50px 10%;
+}
+
+/* logo da loja ___________________________________________*/
+.logo img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10%;
+  top: 0px;
+}
+
+/* ICONES TOPO DA PAGINA ___________________________________________________________________________________________________________________________ */
+.icones {
+  position: absolute;
+  right: 12%;
+  top: 40%;
+}
+.icones i {
+  color: var(--cor-secundaria);
+  font-size: 27px;
+  transition: all 0.42s ease;
+  margin-left: 10px;
+}
+
+.icones i:hover {
+  transform: scale(1.09);
+  color: var(--main-color);
+  transform: translateY(-4px);
+}
+
+/* meio da pagina_______________________________________________________ */
+section {
+  padding: 5% 10%;
+}
+
+.texto-meio h1 {
+  font-size: 65px;
+  text-transform: capitalize;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 6px 0 10px;
+  margin-top: -15px;
+  color: var(--cor-secundaria);
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.highlight {
+  color: #ff007f;
+  font-size: 65px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #ff007f; 
+  animation: blink-cursor 0.5s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* roupas_________________________________________________________________________ */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 3rem;
+  margin-top: 330px;
+}
+
+.fotos {
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 15px;
+  margin-bottom: 80px;
+}
+
+.fotos img {
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+  border-radius: 15px;
+  transition: opacity 0.9s ease-in-out;
+}
+
+/* Ícone de coração________________________________________________________ */
+.icone-coracao {
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  top: 10px;
+  transition: all 0.4s;
+  color: white;
+}
+.icone-coracao:hover {
+  color: var(--main-color);
+}
+.icone-coracao i {
+  transition: color 0.2s;
+}
+
+.icone-coracao i.preenchido {
+  color: var(--main-color); 
+}
+
+/* Estilo das estrelinhas ________________________________________________________ */
+.estrelinha {
+  color: #ff8c00;
+  font-size: 18px;
+  position: absolute;
+  bottom: -65px;
+  right: 10px;
+  transition: all 0.42s;
+  margin-bottom: 40px;
+}
+
+/* Container geral para posicionar h4 e p */
+.preco {
+  position: relative; 
+  margin-top: 455px; 
+}
+
+/* Estilo do título */
+.preco h4 {
+  color: var(--cor-secundaria);
+  font-size: 19px;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin: 0; 
+  transition: text-decoration-color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* Linha aparece ao passar o mouse */
+.fotos:hover .preco h4,
+.preco h4:hover {
+  text-decoration: underline;
+  text-decoration-color: black; 
+}
+
+/* Estilo do preço */
+.preco p {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 0 0; 
+}
+
+/* Adições para a troca de imagem ao passar o mouse________________________________________ */
+.image-container {
+  position: relative;
+  width: 350px;
+  height: 450px;
+}
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+.image-container img.hover-image {
+  opacity: 0;
+}
+.image-container:hover img.hover-image {
+  opacity: 1;
+}
+.image-container:hover img.default-image {
+  opacity: 0;
+}
+
+/* infinito_____________________________________________________________________________ */
+.infinito {
+  background: linear-gradient(to right, #ffd1dc, #add8e6);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0px;
+}
+.logo-infinito img {
+  height: 75px;
+  margin: 0px 40px;
+  cursor: pointer;
+}
+.infinito:hover .logo-infinito {
+  animation-play-state: paused;
+}
+.logo-infinito {
+  display: inline-block;
+  white-space: nowrap;
+  animation: 30s slide infinite linear;
+}
+
+/* transicao pagina_______________________________________________________________ */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ___________________________________________________________________ */
+.search-box {
+  display: none;
+  width: 100%;
+  padding: 26px;
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  width: 50%;
+  border-radius: 15px;
+  margin-left: 380px;
+  margin-top: 0px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid black;
+  outline: none;
+  color: var(--cor-secundaria);
+  vertical-align: middle;
+}
+
+.search-box button {
+  padding: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--cor-secundaria);
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: -55px;
+}
+
+.search-box button i {
+  font-size: 24px;
+}
+
+#close-search-box {
+  display: none;
+  position: fixed;
+  top: 45px;
+  right: 620px;
+  padding: 0;
+  font-size: 30px;
+  border: none;
+  background: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+#close-search-box:hover{
+  color: var(--main-color);
+}
+
+#close-search-box i {
+  font-size: 35px;
+}
+
+/* deixa o fundo escuro_______________________________________________________________ */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* favorits ______________________________________________________________________________________ */
+.favoritos {
+  display: block;
+  width: 24%;
+  height: 100%;
+  background-color: #faf0e6;
+  position: fixed;
+  top: 0;
+  right: -26%;
+  z-index: 1001;
+  transition: right 0.5s ease;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+#close-favoritos {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  cursor: pointer;
+}
+
+#close-favoritos:hover {
+  color: var(--main-color);
+}
+
+.produtz {
+  position: relative; 
+  display: block; 
+  margin-top: 50px;
+}
+
+.produtz img {
+  width: 380px;
+  height: 380px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1001;
+}
+
+.produtz .coracao {
+  position: absolute;
+  bottom: 30px; 
+  right: 10px; 
+  font-size: 30px;
+  color: var(--main-color);
+  cursor: pointer; 
+  z-index: 1002; 
+}
+
+.produtz .preco {
+  position: absolute;
+  bottom: 10px; 
+  color: white; 
+  padding: 5px 10px; 
+  border-radius: 5px;
+  font-size: 18px; 
+  z-index: 1002; 
+  margin-left: 10px;
+}
+
+.produtz:first-child img {
+  margin-top: 125px; 
+}
+
+.produtz:last-child img {
+  margin-bottom: 170px; 
+  position: relative;
+}
+
+.lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total-preco {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.favoritos.active {
+  right: 0;
+}
+
+.gray-line {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.preco-texto {
+  font-size: 23px;
+  color: var(--cor-secundaria);
+  margin-left: -10px;
+}
+
+
+/* lateral carrinho _______________________________________________________________________________________ */
+.compras {
+  display: block;
+  width: 24%;
+  height: 100%;
+  background-color: #faf0e6;
+  position: fixed;
+  top: 0;
+  right: -26%;
+  z-index: 1001;
+  transition: right 0.5s ease;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.topo {
+  position: fixed;
+  z-index: 1003;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  height: 12%;
+  width: 23%;
+  margin-left: -20px;
+}
+
+.topo h2 {
+  margin-top: 40px;
+  color: var(--cor-secundaria);
+  text-align: center;
+}
+
+.topo hr {
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+#close-compras {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  cursor: pointer;
+}
+
+#close-compras:hover {
+  color: var(--main-color);
+}
+
+.produtz {
+  position: relative;
+  display: block; 
+}
+
+.produtz img {
+  width: 380px;
+  height: 380px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1001;
+}
+
+.produtz .remover {
+  position: absolute;
+  top: -110px;
+  right: 10px;
+  font-size: 24px; 
+  color: var(--main-color); 
+  cursor: pointer; 
+  z-index: 1002; 
+}
+
+.produtz:first-child img {
+  margin-top: 130px; 
+}
+
+.produtz:last-child img {
+  margin-bottom: 170px; 
+}
+
+.produtz .preco {
+  position: absolute;
+  bottom: 30px; 
+  left: -5px; 
+  color: var(--main-color); 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 18px; 
+  z-index: 1002;
+}
+
+.produtz:hover .preco::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-secundaria);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+
+.produtz:last-child .preco {
+  bottom: 180px; 
+}
+
+.produtz:hover img {
+  filter: brightness(
+    0.8
+  ); 
+}
+
+.finalizar-compra-btn {
+  display: block;
+  width: 105%;
+  margin: 20px auto;
+  padding: 18px;
+  background: linear-gradient(to right, #ffd1dc, #add8e6);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  margin-left: -10px;
+}
+
+.finalizar-compra-btn:hover {
+  background-color: #0a0eeee5;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px var(--main-color);
+}
+
+.fretis-carrinho {
+  font-size: 15px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preco-container {
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  margin-left: -20px;
+  width: 23%; 
+  background-color: rgb(255, 255, 255);
+  z-index: 1010; 
+}
+
+.total-preco {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.compras.active {
+  right: 0;
+}
+
+.gray-line {
+  border: 1px solid #cccccc;
+  margin: 20px 0;
+}
+
+.preco-texto {
+  font-size: 23px;
+  color: var(--cor-secundaria);
+  margin-left: -10px;
+}
+
+.preco-valor {
+  font-size: 23px;
+  color: var(--cor-secundaria);
+  margin-right: -15px;
+}
+
+
+.fretis-carrinho {
+  font-size: 15px;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+
+
+/* final do site roda de pe___________________________________________________________ */
+.footer {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 45%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  line-height: 2.4;
+}
+
+.footer-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.7s ease, left 0.4s ease;
+}
+
+.footer-list a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer-list a:not(:hover)::after {
+  transition: width 0.4s ease, left 0.4s ease;
+  width: 0;
+  left: auto;
+  right: 0;
+}
+
+.footer-list a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* titulo do texto redes */
+.footer-titulo {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 530px;
+  display: flex;
+  white-space: nowrap;
+}
+
+.footer-title2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 130px;
+}
+
+/* texto das rede */
+.footer-sites {
+  list-style: none;
+  padding: 0;
+  line-height: 2.4;
+  margin-left: 400px;
+}
+
+/* linha em baixo do texto sites */
+.footer-sites a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.7s ease, left 0.4s ease;
+}
+
+.footer-sites a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer-sites a:not(:hover)::after {
+  transition: width 0.4s ease, left 0.4s ease;
+  width: 0;
+  left: auto;
+  right: 0;
+}
+
+.footer-sites a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* links  */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 130px;
+}
+
+/* parte da caixa box */
+.footer-input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+/* botao de enviar_____________________________ */
+.footer-button {
+  padding: 10px 15px;
+  background: none;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.footer-button:hover {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid pink;
+  border-radius: 5px;
+}
+
+/* Área inferior */
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  left: 1%;
+  position: absolute;
+  margin-top: 15px;
+}
+
+.criador {
+  position: absolute;
+  left: 2%;
+  margin-top: 45px;
+}
+
+.criador i {
+  color: white;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.criador i:hover {
+  transform: translateY(-3px);
+  transition: 0.4s;
+}
+
+.images img {
+  height: 150px;
+  width: 150px;
+  margin-left: 120px;
+}
+
+/* resposivo ________________________________________________________________ */
+@media screen and (max-width: 926px){
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 10%;
+}
+
+header.sticky {
+  padding: 40px;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  margin-top: -5px;
+  left: 3%;
+}
+
+.icones {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center; 
+}
+
+.icones i{
+  font-size: 24px;
+}
+
+.texto-meio h1{
+  font-size: 28px;
+  margin-left: -30px;
+  margin-top: -20px;
+}
+
+.highlight{
+   font-size: 24px;
+}
+
+.produtos img{
+  width: 190px;
+  height: 250px;
+ }
+
+.fotos {
+  position: relative;
+  margin-bottom: -250px;
+  margin-top: 70px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  gap: 3rem;
+  margin-left: -39px;
+  margin-top: 150px;
+}
+
+.estrelinha {
+  font-size: 10px;
+  position: absolute;
+  bottom: 140px;
+  right: 48%;
+}
+
+.icone-coracao {
+  position: absolute;
+  top: 5px; 
+  left: 150px;
+  font-size: 30px;  
+}
+
+.preco {
+  position: relative; 
+  margin-top: 255px; 
+}
+
+.preco h4 {
+  font-size: 12px;
+}
+
+.preco p{
+  font-size: 14px;
+}
+
+.footer{
+  margin-top: 130px;
+}
+
+.footer-title2{
+  margin-left: 200px;
+  margin-top: -20px;
+}
+
+.footer-list a{
+  left: 20%;
+}
+
+.footer img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin-top: -10px;
+  left: 40%;
+}
+
+.footer-titulo{
+  margin-left: 10px;
+  margin-bottom: -300px;
+}
+
+.footer-sites{
+  margin-left: -100px;
+ position: absolute;
+ margin-top: 300px;
+}
+
+.footer-divider-permanent{
+  margin-top: 30px;
+}
+
+.images img {
+  height: 100px;
+  width: 100px;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+
+.favoritos {
+  width: 100%;
+  right: -100%;
+}
+
+.topo {
+  width: 100%;
+}
+
+.favoritos .preco-container {
+  width: 100%; 
+}
+
+.compras {
+  width: 100%;
+  right: -100%;
+}
+
+.preco-container {
+  width: 100%;  
+}
+
+/* pesquisar */
+.search-box input {
+  width: 90%;
+  margin-left: 10px;
+}
+
+.search-box button {
+  margin-top: 4px;
+}
+
+#close-search-box {
+  top: 42px;
+  right: 10px;
+}
+
+#close-search-box:hover{
+  color: var(--main-color);
+}
+
+#close-search-box i {
+  font-size: 35px;
+}
+
+.finalizar-compra-btn {
+  margin-left: -10px;
+}
+
+.criador {
+  position: absolute;
+  left: 5%;
+  margin-top: 45px;
+}
+
+.footer-bottom p {
+  left: 5%;
+}
+
+.fretis-carrinho {
+  font-size: 15px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+
+
+}
+
+@media screen and (min-width: 927px) and (max-width: 1366px){
+
+  body {
+    overflow-x: hidden;
+}
+
+  .logo img {
+    right: 43%;
+    top: -10px;
+  }
+
+  .icones {
+    right: 7%;
+  }
+
+  .texto-meio h1{
+    font-size: 50px;
+  }
+  
+  .highlight{
+     font-size: 50px;
+  }
+
+  .produtos {
+    margin-top: 240px;
+  }
+
+  .footer-titulo {
+    margin-left: 300px;
+  }
+
+  .footer-sites {
+    margin-left: 170px;
+  }  
+
+  .images{
+    margin-left: -140px;
+  }
+
+  .search-box input {
+    margin-left: 350px;
+  }
+  
+  #close-search-box {
+    right: 19%;
+}
+
+.favoritos {
+  width: 35%;
+  right: -50%;
+}
+
+.topo {
+  width: 35%;
+}
+
+.compras {
+  width: 35%;
+  right: -50%;
+}
+
+.topo {
+  width: 35%;
+}
+
+.preco-container {
+  width:35%; 
+}
+
+
+}

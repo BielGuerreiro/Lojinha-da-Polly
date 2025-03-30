@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>LOJINHA DA POLLY</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/boneca.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="img/oie_transparent.png" alt="logo"/>
+      </a>
+    </header>
+
+    <section class="secao-dados-pessoais">
+      <h2>Dados pessoais</h2>
+      <div class="dados-pessoais">
+          <div class="input-container">
+              <div class="campo-nome">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" placeholder="Digite seu nome">
+              </div>
+              <div class="campo-sobrenome">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+              </div>
+          </div>
+          <div class="input-container">
+              <div class="campo-tell">
+                  <label for="telefone">Telefone</label>
+                  <input type="text" id="telefone" placeholder="+55 (__) _____-____">
+              </div>    
+          </div>
+      </div>
+    </section>
+
+    <section>
+      <form id="frete-form" action="URL_DO_SEU_BACKEND" method="POST">
+          <div class="entrega-container">
+              <div class="input-container">
+                <h2>Informações de Entrega</h2>
+                  <div class="campo campo-cep">
+                      <label for="cep">CEP</label>
+                      <input type="text" id="cep" name="cep" maxlength="8">
+                  </div>
+              </div>
+              <div class="input-container">
+                  <div class="campo endereco">
+                      <label for="endereco">Endereço</label>
+                      <input type="text" id="endereco" name="endereco" maxlength="64">
+                  </div>
+                  <div class="campo numero">
+                      <label for="numero">Número</label>
+                      <input type="text" id="numero" name="numero" maxlength="3">
+                  </div>
+              </div>
+              <div class="input-container">
+                  <div class="campo complemento">
+                      <label for="complemento">Complemento</label>
+                      <input type="text" id="complemento" name="complemento" maxlength="64">
+                  </div>
+                  <div class="campo bairro">
+                      <label for="bairro">Bairro</label>
+                      <input type="text" id="bairro" name="bairro" maxlength="64">
+                  </div>
+              </div>
+              <div class="input-container">
+                  <div class="campo cidade">
+                      <label for="cidade">Cidade</label>
+                      <input type="text" id="cidade" name="cidade" maxlength="100">
+                  </div>
+                  <div class="campo estado">
+                      <label for="estado">Estado</label>
+                      <input type="text" id="estado" name="estado" maxlength="40">
+                  </div>
+              </div>
+              <div class="input-container">
+                  <div class="campo" style="flex-direction: row; align-items: center;">
+                      <input type="checkbox" id="salvar-informacoes" name="salvar-informacoes">
+                      <label for="salvar-informacoes" style="margin-left: 10px; white-space: nowrap; margin-top: -10px;">Salvar Informações</label>
+                  </div>
+              </div>
+          </div>
+
+          <div class="forma-de-frete">
+            <h2>Forma de Frete</h2>
+            <div class="opcao-frete" data-value="pex">
+                <span class="circle"></span>
+                <h3>Pex</h3>
+                <span class="preco" id="preco-pex">R$ 27,19 - 10 dias úteis</span>
+            </div>
+            <div class="opcao-frete" data-value="sedex">
+                <span class="circle"></span>
+                <h3>Sedex</h3>
+                <span class="preco" id="preco-sedex">R$ 36,67 - 4 dias úteis</span>
+            </div>
+            <input type="hidden" name="frete" id="frete-escolhido">
+        </div>
+        
+        <button type="button" onclick="window.location.href='whatsapp://send?phone=5511976884784';" class="button">Pagar</button>
+
+      </form>
+  </section>
+
+  
+  <section>
+    <div class="container">
+        <div class="produto">
+          <img src="img/produto 3-2.jpg" alt=""/>
+          <div class="contador">1</div>
+        </div>
+  
+        <div class="detalhes">
+            <div class="titulo">
+                <h1 id="titulo-produto">KIT MARIA CLARA E JP</h1>
+            </div>
+
+            <div class="precos">
+                <p id="preco-produto">R$ 99,90</p>
+            </div>
+
+            <div class="sub">
+                <h2>Subtotal</h2>
+    
+                <div class="preco-sub">
+                    <p>R$ 120,00</p>
+                </div>
+            </div>
+    
+            <div class="fretes">
+                <h2>Frete</h2>
+    
+                <div class="preco-frete">
+                    <p>R$ 27,00</p>
+                </div>
+            </div>
+    
+            <div class="total">
+                <h2>Preço Total</h2>
+    
+                <div class="preco-total">
+                    <p>R$ 250,00</p>
+                </div>
+            </div>
+
+            <div class="selecao-detalhes">
+                <p id="detalhes-selecao">G / Rosa</p>
+            </div>
+        </div>
+    </div>
+      
+</section>
+
+    <footer class="footer">
+        <a href="https://lojinha-da-polly-politica-de-frete.netlify.app/" class="footer-link">Política de Frete</a> |
+        <a href="https://lojinhapolly-politica-de-privacidade.netlify.app/" class="footer-link">Política de Privacidade</a> |
+        <a href="https://lojinha-da-polly-termos-de-uso.netlify.app/" class="footer-link">Termos de Uso</a>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

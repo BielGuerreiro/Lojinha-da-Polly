@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de login</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="https://wondrous-jalebi-50cf0f.netlify.app" class="logo">
+          <img src="img/oie_transparent.png" alt="logo" />
+        </a>
+
+        <div class="icones">
+          <a href="#" id="search-icon"><i class="bx bx-search"></i></a>
+          <a href="#" id="heart-icon"><i class="bx bx-heart"></i></a>
+          <a href="#" id="bag-icon"><i class="bx bx-shopping-bag"></i></a>
+          <a href="https://lojinha-da-polly-login.netlify.app/"
+            ><i class="bx bx-user"></i
+          ></a>
+        </div>
+        <!--final div icones-->
+      </header>
+  
+     <!-- funcionalidade ________________________________________________------------------------------------------------------------------------------------- -->
+     <div class="overlay" id="overlay"></div>
+     <div class="search-box" id="search-box">
+       <input type="text" id="search-input" placeholder="Pesquisar" />
+       <button id="search-btn"><i class="bx bx-search"></i></button>
+     </div>
+ 
+     <button id="close-search-box"><i class="bx bx-x"></i></button>
+ 
+     <!-- favoritos ______________________________________________________________ -->
+     <div class="favoritos" id="favoritos">
+       <div class="topo">
+         <i class="bx bx-x" id="close-favoritos"></i>
+         <h2>Favoritos (<span id="product-count">0</span>)</h2>
+         <hr />
+       </div>
+ 
+       <div class="lateral">
+         <a href="" class="produtz">
+           <img src="img/produto 11.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 9-1.jpg" alt="Favorito 2" />
+           <p class="preco">R$45,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 8-1.jpg" alt="Favorito 3" />
+           <p class="preco">R$50,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+       </div>
+     </div>
+ 
+     <!-- carrinho _____________________________________________________________ -->
+     <div class="compras" id="compras">
+       <div class="topo">
+         <i class="bx bx-x" id="close-compras"></i>
+         <h2>Carrinho (<span id="product-count">0</span>)</h2>
+         <hr />
+       </div>
+ 
+       <div class="lateral">
+         <a href="" class="produtz">
+           <img src="img/produto 11.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+       </div>
+ 
+       <div class="preco-container">
+         <div class="total-preco">
+           <span class="preco-texto">Preço Total</span>
+           <span class="preco-valor">R$1.000,00</span>
+         </div>
+         <button class="finalizar-compra-btn">Finalizar Compra</button>
+         <div class="fretis-carrinho">Frete grátis acima de R$ 100,00</div>
+       </div>
+     </div>
+
+    <div class="main-container">
+      <div class="login-container">
+        <form class="login-form" onsubmit="handleLogin(event)">
+          <h1>Login</h1>
+
+          <label for="username">Usuário</label>
+          <input
+            type="text"
+            id="username"
+            required
+            minlength="8"
+            maxlength="15"
+          />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required maxlength="277" />
+
+        <label for="password">Senha</label>
+        <div class="password-container">
+          <input
+          type="password"
+          id="password"
+          required
+          minlength="6"
+          maxlength="12"
+          />
+        <i class="bx bx-hide" id="toggle-password"></i>
+        </div>
+
+          <label for="phone">Telefone</label>
+          <input
+            type="text"
+            id="phone"
+            required
+            maxlength="20"
+            placeholder="(XX) XXXXXXXXXXX"
+            oninput="maskPhone(event)"
+          />
+
+          <button type="submit" id="submitButton">Entrar</button>
+
+          <div class="termos">
+            <p>
+              Ao continuar, você concorda com nossos<br />
+              <a href="URL_DOS_TERMOS">Termos de Uso</a> &
+              <a href="URL_DA_POLITICA">Política de Privacidade</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="transparent-section"></div>
+    </div>
+
+    <section>
+      <div class="pagina2">
+        <h1>seja bem vindo!!!</h1>
+      </div>
+
+      <div class="texto2">
+        <h1>
+          faça login e se junte <br />
+          a nossa equipe!
+        </h1>
+      <div class="logo2"> 
+        <img src="img/oie_transparent.png" alt="logo" />
+      </div>
+        <div class="imagem">
+          <img src="img/personagem.png" alt="logo" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

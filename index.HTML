@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>LOJINHA DA POLLY</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="img/boneca.png" type="image/x-icon" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="img/oie_transparent.png" alt="logo" /></a>
+
+    <ul class="menu">
+      <li><a href="#home" class="active">inicío</a></li>
+      <li><a href="#lancamento">Lançamentos</a></li>
+      <li><a href="#body">Conjuntos</a></li>
+      <li><a href="#kits">kits Aniversário</a></li>
+      <li><a href="#acessorios">Acessórios</a></li>
+    </ul>
+
+    <a href="https://lojinha-da-polly-personalizado.netlify.app/">
+      <button class="butao botao-pulsante"> Peça Seu MêsVersário <span></span>Personalizado</button></a>
+
+    <div class="icones">
+      <a href="#" id="search-icon"><i class="bx bx-search"></i></a>
+      <a href="#" id="heart-icon"><i class="bx bx-heart"></i></a>
+      <a href="#" id="bag-icon"><i class="bx bx-shopping-bag"></i></a>
+      <a href="https://lojinha-da-polly-login.netlify.app/" id="user"><i class="bx bx-user"></i></a>
+
+      <!-- menu responsivo -->
+      <a href="javascript:void(0);" id="menus"><i class='bx bx-menu'></i></a>
+      <ul id="responsive-menu" class="menu">
+        <li>
+          <a href="https://lojinha-da-polly-login.netlify.app/" id="user">
+            <div class="icon-border"><i class="bx bx-user"></i></div>
+            <span>Fazer Login</span>
+          </a>
+        </li>
+        <li><a href="#home" class="active">Inicío</a></li>
+        <li><a href="#lancamento">Lançamentos</a></li>
+        <li><a href="#body">Kits</a></li>
+        <li><a href="#kits">Kits Mêsversário</a></li>
+        <li><a href="#acessorios">Acessórios</a></li>
+
+        <div class="menu-social">
+          <a href="https://wa.me/seu-numero" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+          <a href="https://facebook.com/seu-perfil" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://instagram.com/seu-perfil" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="mailto:seu-email@gmail.com"><i class='bx bxl-gmail'></i></a>
+        </div>
+      </ul>
+
+      <div> <!--final div icones-->
+  </header>
+
+  <!-- funcionalidade ________________________________________________------------------------------------------------------------------------------------- -->
+  <div class="overlay" id="overlay"></div>
+  <div class="search-box" id="search-box">
+    <input type="text" id="search-input" placeholder="Pesquisar" />
+    <button id="search-btn"><i class="bx bx-search"></i></button>
+  </div>
+
+  <button id="close-search-box"><i class="bx bx-x"></i></button>
+
+  <!-- favoritos ______________________________________________________________ -->
+  <div class="favoritos" id="favoritos">
+    <div class="topo">
+      <i class="bx bx-x" id="close-favoritos"></i>
+      <h2>Favoritos (<span id="product-count">0</span>)</h2>
+      <hr />
+    </div>
+
+    <div class="lateral"></div>
+  </div>
+
+  <!-- carrinho _____________________________________________________________ -->
+  <div class="compras" id="compras">
+    <div class="topo">
+      <i class="bx bx-x" id="close-compras"></i>
+      <h2>Carrinho (<span id="product-count">0</span>)</h2>
+      <hr />
+    </div>
+
+    <div class="lateral"></div>
+
+    <div class="preco-container">
+      <div class="total-preco">
+        <span class="preco-texto">Preço Total</span>
+        <span class="preco-valor">R$700,00</span>
+      </div>
+      <button class="finalizar-compra-btn">Finalizar Compra</button>
+      <div class="fretis-carrinho">Frete grátis acima de R$ 100,00</div>
+    </div>
+  </div>
+
+  <!--HOME PAGE __________________________________________________________________________________________________________________________________ -->
+  <section class="meio-pagina" id="home">
+    <div class="texto-meio">
+      <h1> Novas Coleções de <br /> <span class="highlight" id="dynamic-text"></span></h1>
+
+      <a href="#lancamento" class="seta-direita"> Confira Aqui <i class="bx bx-right-arrow-alt"></i></a>
+
+      <!-- quadrado com as imagens -->
+      <div class="carrossel-container">
+        <img src="img/produto 9.jpg" class="ativo" />
+        <img src="img/produto 8.jpg" />
+        <img src="img/produto 7.jpg" />
+        <img src="img/produto 6.jpg" />
+        <img src="img/produto 5.jpg" />
+        <img src="img/produto 4.jpg" />
+        <img src="img/produto 1.jpg" />
+        <img src="img/produto 10.jpg" />
+        <img src="img/produto 11.jpg" />
+        <img src="img/produto 12.jpg" />
+        <img src="img/produto 13.jpg" />
+        <img src="img/produto 2.jpg" />
+
+        <div class="indicadores">
+          <span class="bolinha ativo"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+          <span class="bolinha"></span>
+        </div>
+      </div>
+
+      <div class="direita">
+        <div class="sites">
+          <a href="https://www.instagram.com/lojinha.dapolly/" target="_blank" class="insta"><i
+              class="bx bxl-instagram"></i></a>
+
+          <a href="https://wa.me/5511976884784" target="_blank" class="zap"><i class="bx bxl-whatsapp"></i></a>
+
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elainefguerreiro@gmail.com" target="_blank"
+            class="gmail"><i class="bx bxl-gmail"></i></a>
+          <a href="https://m.facebook.com/Elaineeguerreiro/" target="_blank" class="face"><i
+              class="bx bxl-facebook"></i></a>
+        </div>
+      </div>
+    </div> <!-- final div texto meio -->
+  </section>
+
+  <!-- comeco dos produtos ____________________________________________________________-->
+  <section class="segunda" id="lancamento">
+    <div class="texto-centro">
+      <h2>NOVOS <span>LANÇAMENTOS </span></h2>
+    </div>
+
+    <!-- prodto 1 -------------------------------------------------------------------- -->
+    <div class="produtos">
+      <div class="fotos image-container" data-product-id="produto-1">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div><!--final div estrelinha-->
+
+        <div class="preco">
+          <h4> CONJUNTO MARIA<br /> CLARA E JP</h4>
+          <p class="preco-antigo">R$95,00 - R$ 150,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 2 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-2">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO ALERQUINA</h4>
+          <p class="preco-antigo">R$ ???</p>
+        </div> <!--final preco-->
+      </div><!--fotos-->
+
+      <!-- prodto 3 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-3">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO BOLOFOFOS</h4>
+          <p class="preco-antigo">R$ 85,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 4 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-4">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4> CONJUNTO COELHINHO <br /> DA PÁSCOA</h4>
+          <p class="preco-antigo">R$ ???</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 5 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-5">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div>
+        <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4> CONJUNTO PODEROSA <br /> CHEFINHA </h4>
+          <p class="preco-antigo">R$85,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 6 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-6">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO CARNAVAL</h4>
+          <p class="preco-antigo">R$???</p>
+        </div> <!--final preco-->
+      </div><!--fotos-->
+
+      <!-- produto 7 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-7">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div><!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO BARBIE</h4>
+          <p class="preco-antigo">R$ ???</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 8 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-8">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+        <div class="texto-produto">
+          <h5>Novo</h5>
+        </div> <!--final div texto-->
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4> CONJUNTO PEQUENA <br /> SEREIA </h4>
+          <p class="preco-antigo">R$ ???</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+    </div><!--final div produtos-->
+  </section>
+
+  <!-- logo infinito -->
+  <div class="infinito">
+    <div class="logo-infinito">
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+  </div>
+
+  <!-- PAGINA 3  ________________________________________________________________________________________________________________________________________-->
+  <section class="terceira" id="body">
+    <div class="texto-centro2">
+      <h2>CONJUNTOS</h2>
+    </div>
+
+    <!-- produto 1 kit ________________________________________________________________________________________-->
+    <div class="produtos">
+      <div class="fotos image-container">
+        <a href="/produtos/produto-9/index.html">
+          <img src="img/produto 1.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 1-2.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO SAIA LOL</h4>
+          <p class="preco-antigo">R$99,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 10 -------------------------------------------------------------------- -->
+      <div class="fotos image-container">
+        <a href="/produtos/produto-10/index.html">
+          <img src="img/produto 2.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 2-1.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO STITCH</h4>
+          <p class="preco-antigo">R$189,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 11 -------------------------------------------------------------------- -->
+      <div class="fotos image-container">
+        <a href="/produto/11">
+          <img src="img/produto 3.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 3-1.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MARIA <br>CLARA E JP</h4>
+          <p class="preco-antigo">R$ 199,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 12 -------------------------------------------------------------------- -->
+      <div class="fotos image-container">
+        <a href="/produto/12">
+          <img src="img/produto 4.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 4-1.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO BELA E <BR>A FERA</h4>
+          <p class="preco-antigo">R$ 189,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 13 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-13">
+        <a href="https://lojinhadapolly-mostro-sa.netlify.app/">
+          <img src="img/produto 5.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 5-1.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOSTROS S/A</h4>
+          <p class="preco-antigo">R$189,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 14 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-14">
+        <a href="https://lojinhapolly-minnie.netlify.app/">
+          <img src="img/produto 6.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 6-1.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MINNIE ROSA </h4>
+          <p class="preco-antigo">R$ 199,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 15 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-15">
+        <a href="https://lojinhapolly-bolofofos.netlify.app/">
+          <img src="img/produto 7-1.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 7.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO BOLOFOFOS</h4>
+          <p class="preco-antigo">R$ 189,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 16 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-16">
+        <a href="https://lojinhapolly-magali.netlify.app/">
+          <img src="img/produto 8.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 8-1.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MAGALI</h4>
+          <p class="preco-antigo">R$ 85,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 17 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-17">
+        <a href="https://lojinhapolly-moana.netlify.app/">
+          <img src="img/produto 9.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 9-1.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 18 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-18">
+        <a href="https://lojinhapolly-poderosa-chefinha.netlify.app/">
+          <img src="img/produto 10.jpg" alt="produto" class="default-image" />
+          <img src="img/produto 10-2.jpg" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO PODEROSA <BR>CHEFINHA LILÁS</h4>
+          <p class="preco-antigo">R$189,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+
+    </div> <!--final div produtos-->
+
+    <h2 class="ver-mais">
+      <a href="https://www.youtube.com/watch?v=vhqsrepur9Y&t=43s">Ver Mais</a>
+    </h2>
+  </section>
+
+  <!-- logo infinito -->
+  <div class="infinito">
+    <div class="logo-infinito">
+      <img class="Aspas" src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+  </div>
+
+  <!-- PAGINA 4 -->
+  <section class="quarta" id="kits">
+    <div class="texto-centro3">
+      <h2>KITS <span>ANIVERSÁRIO</span></h2>
+    </div>
+
+    <!-- produto 19 -->
+    <div class="produtos">
+      <div class="fotos image-container" data-product-id="produto-19">
+        <a href="https://lojinhapolly-bolofofos-lilas.netlify.app/">
+          <img src="img/produto 11.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 11-2.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT BOLOFOFOS LILAS</h4>
+          <p class="preco-antigo">R$ 179,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 2a0 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-20">
+        <a href="https://lojinhapolly-kit-realeza.netlify.app/">
+          <img src="img/produto 12-3.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 12.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT REALEZA</h4>
+          <p class="preco-antigo">R$ 179,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 21 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-21">
+        <a href="https://lojinhapolly-ariel-sereia.netlify.app/">
+          <img src="img/produto 13.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 13-1.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT ARIEL SEREIA</h4>
+          <p class="preco-antigo">R$ 179,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 22 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-22">
+        <a href="https://lojinhapolly-kit-trolls.netlify.app/">
+          <img src="img/produto 14.jpg" alt="produto" class="default-image minha-imagem" />
+          <img src="img/produto 14-1.jpg" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT TROLLS</h4>
+          <p class="preco-antigo">R$ 179,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 23 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-23">
+        <a href="https://lojinhapolly-show-da-luna.netlify.app/">
+          <img src="img/produto 15.jpg" alt="produto" class="default-image " />
+          <img src="img/produto 15-3.jpg" alt="produto" class="hover-image " />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT SHOW DA LUNA</h4>
+          <p class="preco-antigo">R$ 179,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 24 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-24">
+        <a href="https://lojinhapolly-peppa-pig.netlify.app/">
+          <img src="img/produto 16.jpg" alt="produto" class="default-image " />
+          <img src="img/produto 16-1.jpg" alt="produto" class="hover-image " />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>KIT PEPPA PIG</h4>
+          <p class="preco-antigo">R$ 189,90</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 25 ------------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-25">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image " />
+          <img src="img/roupa.avif" alt="produto" class="hover-image " />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- produto 26 ----------------------------------------------------------------->
+      <div class="fotos image-container" data-product-id="produto-26">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image " />
+          <img src="img/roupa.avif" alt="produto" class="hover-image " />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 27 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-27">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image " />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO STITCH</h4>
+          <p class="preco-antigo">R$189,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 28 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-28">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image " />
+          <img src="img/roupa.avif" alt="produto" class="hover-image " />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO STITCH</h4>
+          <p class="preco-antigo">R$189,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+
+    </div> <!--final div produtos-->
+  </section>
+
+  <!-- logo infinito -->
+  <div class="infinito">
+    <div class="logo-infinito">
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+    </div>
+
+    <div class="logo-infinito">
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+      <img src="img/boneca.png" alt="" />
+      <img src="img/oie_transparent.png" alt="" />
+    </div>
+  </div>
+
+  <!-- pagina 5 -->
+  <section class="quinta" id="acessorios">
+    <div class="texto-centro4">
+      <h2>ACESSÓRIOS</h2>
+    </div>
+
+    <!-- produto 29 ___________________________________________________________________________________________________ -->
+    <div class="produtos">
+      <div class="fotos image-container" data-product-id="produto-29">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 30 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-30">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 31 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-31">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 32 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-32">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image minha-imagem" />
+          <img src="img/roupa.avif" alt="produto" class="hover-image minha-imagem" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+      <!-- prodto 33 -------------------------------------------------------------------- -->
+      <div class="fotos image-container" data-product-id="produto-33">
+        <a href="">
+          <img src="img/roupa.avif" alt="produto" class="default-image " />
+          <img src="img/roupa.avif" alt="produto" class="hover-image" />
+        </a>
+
+        <div class="icone-coracao">
+          <i class="bx bx-heart" data-icon-heart></i>
+        </div> <!--final div coracao-->
+
+        <div class="estrelinha">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+        </div> <!--final div estrelinha-->
+
+        <div class="preco">
+          <h4>CONJUNTO MOANA</h4>
+          <p class="preco-antigo">R$ 95,00</p>
+        </div> <!--final preco-->
+      </div> <!--fotos-->
+
+    </div> <!--fianal produtos-->
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="footer-title">
+          Seja o primeiro a receber nossos<br />Lançamentos e Novidades:
+        </h2>
+        <form>
+          <input type="email" placeholder="Seu email" class="footer-input" />
+          <button type="submit" class="footer-button">↗</button>
+        </form>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-titulo">Redes Da Loja</h3>
+        <ul class="footer-sites">
+          <li>
+            <a href="https://www.instagram.com/lojinha.dapolly/" class="footer-link">Instagram</a>
+          </li>
+
+          <li>
+            <a href="https://m.facebook.com/Elaineeguerreiro/" class="footer-link">Facebook</a>
+          </li>
+
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elainefguerreiro@gmail.com"
+              class="footer-link">Gmail</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title2">Políticas</h3>
+        <ul class="footer-list">
+          <li><a href="https://lojinha-da-polly-termos-de-uso.netlify.app/" class="footer-link">Termos de uso</a></li>
+          <li><a href="https://lojinha-da-polly-politica-de-frete.netlify.app/" class="footer-link">Política de
+              Frete</a></li>
+          <li><a href="https://lojinhapolly-politica-de-privacidade.netlify.app/" class="footer-link">Política de
+              Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider-permanent" />
+    <div class="footer-bottom">
+      <p>© 2025 GaBielz :] . All Rights Reserved.</p>
+    </div>
+
+    <div class="criador">
+      <a href=""><i class="bx bxl-github"></i></a>
+
+      <a href="https://www.instagram.com/ga_bi3l/"><i class="bx bxl-instagram"></i></a>
+
+      <a href="#"><i class="bx bxl-linkedin"></i></a>
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bielguerreiro2526@gmail.com" target="_blank"><i
+          class="bx bxl-gmail"></i></a>
+    </div>
+
+    <div class="images">
+      <img src="img/oie_transparent.png" alt="#" />
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

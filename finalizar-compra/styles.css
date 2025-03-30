@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Times, serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #ff007f;
+  --cor-secundaria: #4a98b3;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  transition: all 0.42s ease;
+  background-color: white;
+}
+
+body {
+  height: 200vh;
+  background: #faf0e6;
+}
+
+.logo img{
+  height: 100px;
+  width: 100px;
+  left: 10%;
+  top: 0;
+  position: absolute;
+}
+
+/* parte do quadrado invisivel */
+
+
+.container {
+  height: 175%; 
+  width: 60%;
+  padding: 20px;
+  margin-top: 150px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.produto {
+  position: sticky;
+  top: 12%;
+  display: flex;
+  margin-top: 15px;
+  border: 2px solid var(--cor-secundaria);
+  width: 18.2%;
+  align-items: flex-start;
+  height: 200px;
+  width: 200px;
+}
+
+.produto img {
+  height: 100%;
+  width: 100%;
+}
+
+.contador {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  background-color: rgb(197, 197, 197);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.detalhes {
+  position: sticky;
+  top: 15%;
+  margin-left: 250px;
+  margin-top: -200px;
+}
+
+.titulo {
+  color: var(--cor-secundaria);
+  margin-left: -20px;
+}
+
+.precos {
+  color: var(--main-color);
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 55%;
+}
+
+.selecao-detalhes {
+  font-size: 16px;
+  color: var(--cor-secundaria);
+  opacity: 0.6;
+  margin-top: 30px;
+  position: absolute;
+  left: -2%;
+  top: 2.5%;
+}
+
+.sub h2{
+  color: var(--cor-secundaria);
+  font-size: 20px;
+  margin-top: 210px;
+  margin-left: -240px;
+}
+
+.sub p{
+  color: var(--main-color);
+  font-size: 20px;
+  display: flex;
+  margin-top: -32px;
+  margin-left: 300px;
+}
+
+.fretes h2{
+  color: var(--cor-secundaria);
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: -240px;
+}
+
+.fretes p{
+  color: var(--main-color);
+  font-size: 20px;
+  display: flex;
+  margin-top: -32px;
+  margin-left: 310px;
+}
+
+.total h2{
+  color: #367f97;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-left: -240px;
+}
+
+.preco-total p{
+  color: var(--main-color);
+  font-size: 22px;
+  display: flex;
+  margin-top: -32px;
+  margin-left: 291px;
+}
+
+/* parte do usuario dos dasdos _______________________________________________________ */
+
+.secao-dados-pessoais {
+  padding: 30px 0px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  width: fit-content;
+  margin-top: 145px;
+  margin-left: 5px;
+  background-color: var(--cor-secundaria);
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.dados-pessoais {
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  padding-right: 110px;
+}
+
+.campo-nome{
+  width: 25%;
+}
+
+.campo-sobrenome{
+  width: 30%;
+  margin-left: 70px;
+}
+
+.campo-tell{
+  width: 56.5%;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  width: 140%;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+
+/* parte dos endereco __________________________________________________________________ */
+.entrega-container {
+  padding: 0px 30px;
+  border-radius: 8px;
+  background-color: var(--cor-secundaria);
+  width: fit-content;
+  margin: 20px auto;
+  margin-left: 5px;
+  color: white;
+}
+
+.entrega-container input {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.entrega-container label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.entrega-container .input-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entrega-container .campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-cep {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo.endereco {
+  flex: 1 1 75%;
+}
+
+.campo.numero {
+  flex: 1 1 100%;
+}
+
+.campo.complemento {
+  flex: 1 1 75%; 
+}
+
+.campo.bairro {
+  flex: 1 1 25%;
+}
+
+.campo.cidade {
+  flex: 1 1 75%;
+}
+
+.campo.estado {
+  flex: 1 1 25%;
+}
+
+.entrega-container .campo input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+  width: 50%;
+}
+
+.input-container h2{
+  margin-top: 25px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+/* forma de entrega  __________________________________________________________ */
+.forma-de-frete {
+  margin-top: 30px;
+  border-radius: 8px;
+  color: var(--cor-secundaria);
+  width: 34%;
+  margin-left: 20px;
+}
+
+.forma-de-frete h2 {
+  margin-bottom: 20px;
+}
+
+.opcao-frete {
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--cor-secundaria);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.opcao-frete .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #00acc1;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.opcao-frete.selected .circle {
+  background-color: #00acc1;
+}
+
+.opcao-frete.selected {
+  background-color: #e0f7fa;
+  border-color: #00acc1;
+}
+
+.opcao-frete h3{
+  color: var(--cor-secundaria);
+  position: absolute;
+  left: 3%;
+}
+
+/* parte do botao */
+.button {
+  background: linear-gradient(to right, #ffd1dc, #add8e6);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 25px 280px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 80px;
+  margin-left: 35px;
+  font-size: 20px;
+}
+
+.button:hover{
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.footer {
+  margin-left: 100px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.footer-link {
+  text-decoration: underline; 
+  margin: 0 10px;
+  color: var(--main-color); 
+}
+
+.footer-link:hover{
+  color: var(--cor-secundaria);
+}
+
+@media screen and (min-width: 927px) and (max-width: 1366px){
+
+  .container {
+    height: 220%; 
+    width: 40%;
+  }
+
+  .produto {
+    top: 15%;
+  }
+
+  .forma-de-frete {
+    width: 53%;
+  }
+  
+  .opcao-frete h3{
+    left: 4%;
+  }
+
+  .button {
+    padding: 25px 320px;
+  }
+  
+  .footer-link {
+    font-size: 18px;
+  }
+  
+  .titulo {
+    margin-left: -40px;
+    font-size: 15px;
+  }
+  
+  .precos {
+    right: 3%;
+    top: 15%;
+  }
+  
+  .selecao-detalhes {
+    left: -18%;
+    top: 8%;
+  }
+
+  .sub p{
+    margin-left: 128px;
+    white-space: nowrap;
+  }
+  
+  .fretes p{
+    margin-left: 138px;
+    white-space: nowrap;
+  }
+  
+  .preco-total p{
+    margin-left: 120px;
+    white-space: nowrap;
+  }
+  
+  
+}
+
+
+@media screen and (max-width: 926px){
+
+* {
+  max-width: 150vw;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  padding: 45px 5%;
+  box-sizing: border-box; 
+  overflow: hidden; 
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: auto; /* Isso evita que o site tenha um limite de altura fixo */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+
+.logo img{
+  margin-left: -20px;
+  top: -5%;
+}
+
+.container {
+  width: 100%;
+  height: 300px;
+  margin-top: 150px;
+  position: absolute;
+}
+
+.produto {
+  position: static;
+  margin-top: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+.contador {
+  top: 7%;
+  right: 72%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+
+.detalhes {
+  position: static;
+}
+
+.titulo {
+  margin-left: -140px;
+  font-size: 10px;
+  margin-top: 105px;
+}
+
+.precos {
+  font-size: 17px;
+  top: 8%;
+  right: 6%;
+}
+
+.selecao-detalhes {
+  left: 35%;
+  top: 5%;
+}
+
+.sub h2{
+  font-size: 16px;
+  margin-top: 100px;
+  margin-left: -245px;
+}
+
+.sub p{
+  font-size: 17px;
+  margin-top: -35px;
+  margin-left: 36px;
+  white-space: nowrap;
+}
+
+.fretes h2{
+  font-size: 16px;
+  margin-left: -245px;
+  margin-top: 30px;
+}
+
+.fretes p{
+  font-size: 17px;
+  margin-top: -30px;
+  margin-left: 43px;
+  white-space: nowrap;
+}
+
+.total h2{
+  font-size: 20px;
+  margin-left: -245px;
+}
+
+.preco-total p{
+  font-size: 20px;
+  margin-top: -30px;
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+/* dados pessoais ___________________________________________________________ */
+
+.secao-dados-pessoais {
+  margin-left: 4px;
+  width: 98%;
+  margin-top: 500px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.dados-pessoais {
+  padding: 10px;
+  width: 98%;
+  margin-left: -1px;
+}
+
+input {
+  width: 170%;
+}
+
+.campo-tell{
+  width: 56%;
+}
+
+.campo-nome{
+ width: 25%;
+}
+
+.campo-sobrenome{
+  width: 30%;
+  margin-left: 60px;
+}
+
+.entrega-container {
+  width: 98%;
+}
+
+.entrega-container h2{
+  margin-left: 0px;
+}
+
+.entrega-container input {
+  width: 130%;
+}
+
+.forma-de-frete {
+  margin-top: 30px;
+  width: 90%;
+  margin-left: 20px;
+}
+
+.forma-de-frete h2 {
+  margin-left: 10px;
+}
+
+.opcao-frete {
+  margin-bottom: 3px;
+}
+
+.opcao-frete h3{
+  position: static;
+  margin-left: -90px;
+}
+
+/* parte do botao */
+.button {
+  padding: 20px 175px;
+  position: static;
+  margin-top: 50px;
+  z-index: 1002;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.footer {
+  margin-left: -2px;
+  margin-top: 30px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.footer-link {
+  text-decoration: underline; 
+  font-size: 14px;
+  margin: 0 0px;
+  color: var(--main-color); 
+}
+
+.footer-link:hover{
+  color: var(--cor-secundaria);
+}
+
+
+}

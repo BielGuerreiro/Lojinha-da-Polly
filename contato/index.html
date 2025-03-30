@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/oie_transparent.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="img/oie_transparent.png" alt="logo"/></a>
+
+      <div class="icones">
+        <a href="#" id="search-icon"><i class="bx bx-search"></i></a>
+        <a href="#" id="heart-icon"><i class="bx bx-heart"></i></a>
+        <a href="#"><i class="bx bx-shopping-bag"></i></a>
+        <a href="https://lojinha-da-polly-login.netlify.app/"><i class="bx bx-user"></i></a>
+      </div> <!--final div icones-->
+    </header>
+
+    
+     <!-- funcionalidade ________________________________________________------------------------------------------------------------------------------------- -->
+     <div class="overlay" id="overlay"></div>
+     <div class="search-box" id="search-box">
+       <input type="text" id="search-input" placeholder="Pesquisar" />
+       <button id="search-btn"><i class="bx bx-search"></i></button>
+     </div>
+ 
+     <button id="close-search-box"><i class="bx bx-x"></i></button>
+ 
+     <!-- favoritos ______________________________________________________________ -->
+     <div class="favoritos" id="favoritos">
+       <div class="topo">
+         <i class="bx bx-x" id="close-favoritos"></i>
+         <h2>Favoritos (<span id="product-count">0</span>)</h2>
+         <hr />
+       </div>
+ 
+       <div class="lateral">
+         <a href="" class="produtz">
+           <img src="img/produto 11.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 9-1.jpg" alt="Favorito 2" />
+           <p class="preco">R$45,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 8-1.jpg" alt="Favorito 3" />
+           <p class="preco">R$50,00</p>
+           <div class="coracao"><i class="bx bxs-heart"></i></div>
+         </a>
+       </div>
+ 
+       <div class="preco-container">
+         <div class="total-preco">
+           <hr class="linhas" />
+           <span class="preco-texto">Total Favoritos</span>
+           <span class="preco-valor">R$1.000,00</span>
+         </div>
+         <button class="finalizar-compra-btn">Finalizar Compra</button>
+         <div class="fretis-carrinho">Frete grátis acima de R$ 100,00</div>
+       </div>
+     </div>
+ 
+     <!-- carrinho _____________________________________________________________ -->
+     <div class="compras" id="compras">
+       <div class="topo">
+         <i class="bx bx-x" id="close-compras"></i>
+         <h2>Carrinho (<span id="product-count">0</span>)</h2>
+         <hr />
+       </div>
+ 
+       <div class="lateral">
+         <a href="" class="produtz">
+           <img src="img/produto 11.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+         <a href="" class="produtz">
+           <img src="img/produto 10.jpg" alt="Favorito 1" />
+           <p class="preco">R$40,00</p>
+           <i class="bx bx-trash remover" data-id="1"></i>
+         </a>
+       </div>
+ 
+       <div class="preco-container">
+         <div class="total-preco">
+           <span class="preco-texto">Preço Total</span>
+           <span class="preco-valor">R$1.000,00</span>
+         </div>
+         <button class="finalizar-compra-btn">Finalizar Compra</button>
+         <div class="fretis-carrinho">Frete grátis acima de R$ 100,00</div>
+       </div>
+     </div>
+
+    <div class="container">
+      <h1>Peça seu personalizado Aqui</h1>
+      <a href="https://wa.me/5511976884784?text=%20Ol%C3%A1,%20gostaria%20de%20pedir%20um%20personalizado." class="whatsapp-button">
+        Enviar Mensagem no WhatsApp
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
