@@ -131,6 +131,11 @@ header.sticky {
   display: flex;
 }
 
+.butao span {
+  color: var(--main-color);
+  margin-left: 5px;
+}
+
 
 /* logo da loja ________________________________________________________________________________________________________*/
 .logo img {
@@ -138,7 +143,7 @@ header.sticky {
   height: 100px;
   position: absolute;
   right: 45%;
-  top: -10px;
+  top: -5px;
 }
 
 .logo1 img {
@@ -249,7 +254,7 @@ section {
   margin-top: -15px;
   color: var(--cor-secundaria);
   position: absolute;
-  top: 18%;
+  top: 19%;
   left: 11%;
 }
 

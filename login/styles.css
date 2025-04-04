@@ -11,14 +11,17 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --main-color: #ff007f;
   --cor-secundaria: #4a98b3;
 }
+
 body {
   background: #faf0e6;
   height: auto;
 }
+
 header {
   position: fixed;
   width: 100%;
@@ -57,6 +60,7 @@ header {
   transition: all 0.42s ease;
   margin-left: 10px;
 }
+
 .icones i:hover {
   transform: scale(1.09);
   color: var(--main-color);
@@ -92,12 +96,12 @@ header {
   font-size: 16px;
 }
 
-.pagina2 h1{
+.pagina2 h1 {
   font-size: 40px;
   position: absolute;
   color: var(--cor-secundaria);
   top: 40%;
- left: 38%;
+  left: 38%;
 }
 
 .login-form input {
@@ -118,7 +122,7 @@ header {
 
 .password-container input {
   width: 100%;
-  padding-right: 40px; 
+  padding-right: 40px;
 }
 
 .password-container i {
@@ -127,7 +131,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 .login-form input:focus {
@@ -176,7 +180,7 @@ header {
   padding: 15px;
   border: none;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: white;
   background: linear-gradient(to right, #ffd1dc, #add8e6);
   border-radius: 30px;
   cursor: pointer;
@@ -184,8 +188,7 @@ header {
 }
 
 .login-form button:hover {
-  background-color: #ffee00e5;
-  color: var(--cor-secundaria);
+  color: var(--main-color);
 }
 
 .create-account {
@@ -208,8 +211,18 @@ header {
 
 .termos {
   position: fixed;
+
   top: 90%;
   left: 12%;
+}
+
+.termos span {
+  text-decoration: underline;
+  color: var(--cor-secundaria);
+}
+
+.termos span:hover {
+  color: var(--main-color);
 }
 
 /* __________________________________________________________________________________________- */
@@ -224,19 +237,19 @@ header {
   margin: 10px 0;
   border: none;
   font-size: 16px;
-  color: black;
+  color: rgb(255, 255, 255);
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  border: 1px solid black;
+  border: 2px solid rgb(255, 255, 255);
   cursor: pointer;
 }
 
 .social-login button:hover {
   transform: scale(1.1);
-  color: var(--cor-secundaria);
+  color: var(--main-color);
   background-color: white;
 }
 
@@ -272,11 +285,14 @@ header {
 }
 
 .box {
-  padding: 30px;
+  padding: 30px 90px;
   text-align: center;
   background-color: #fff;
   margin: 0 auto;
 }
+
+
+
 button {
   padding: 10px 20px;
   margin-top: 10px;
@@ -288,7 +304,7 @@ button {
 
 .forgot-password {
   text-decoration: none;
-  color:var(--main-color);
+  color: var(--main-color);
   cursor: pointer;
 }
 
@@ -384,7 +400,7 @@ button {
   z-index: 1002;
 }
 
-#close-search-box:hover{
+#close-search-box:hover {
   color: var(--main-color);
 }
 
@@ -449,8 +465,8 @@ button {
 }
 
 .produtz {
-  position: relative; 
-  display: block; 
+  position: relative;
+  display: block;
 }
 
 .produtz img {
@@ -465,31 +481,31 @@ button {
 
 .produtz .coracao {
   position: absolute;
-  bottom: 30px; 
-  right: 10px; 
+  bottom: 30px;
+  right: 10px;
   font-size: 30px;
   color: var(--main-color);
-  cursor: pointer; 
-  z-index: 1002; 
+  cursor: pointer;
+  z-index: 1002;
 }
 
 .produtz .preco {
   position: absolute;
-  bottom: 10px; 
-  color: white; 
-  padding: 5px 10px; 
+  bottom: 10px;
+  color: white;
+  padding: 5px 10px;
   border-radius: 5px;
-  font-size: 18px; 
-  z-index: 1002; 
+  font-size: 18px;
+  z-index: 1002;
   margin-left: 10px;
 }
 
 .produtz:first-child img {
-  margin-top: 125px; 
+  margin-top: 125px;
 }
 
 .produtz:last-child img {
-  margin-bottom: 170px; 
+  margin-bottom: 170px;
   position: relative;
 }
 
@@ -504,9 +520,9 @@ button {
   bottom: 0;
   padding: 20px;
   margin-left: -20px;
-  width: 23%; 
+  width: 23%;
   background-color: rgb(255, 255, 255);
-  z-index: 1010; 
+  z-index: 1010;
 }
 
 .total-preco {
@@ -612,7 +628,7 @@ button {
 
 .produtz {
   position: relative;
-  display: block; 
+  display: block;
 }
 
 .produtz img {
@@ -629,28 +645,28 @@ button {
   position: absolute;
   top: -50px;
   right: 10px;
-  font-size: 24px; 
-  color: rgba(255, 0, 0, 0.8); 
-  cursor: pointer; 
-  z-index: 1002; 
+  font-size: 24px;
+  color: rgba(255, 0, 0, 0.8);
+  cursor: pointer;
+  z-index: 1002;
 }
 
 .produtz:first-child img {
-  margin-top: 130px; 
+  margin-top: 130px;
 }
 
 .produtz:last-child img {
-  margin-bottom: 170px; 
+  margin-bottom: 170px;
 }
 
 .produtz .preco {
   position: absolute;
-  bottom: 30px; 
-  left: -5px; 
-  color: var(--main-color); 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 18px; 
+  bottom: 30px;
+  left: -5px;
+  color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
   z-index: 1002;
 }
 
@@ -666,13 +682,11 @@ button {
 }
 
 .produtz:last-child .preco {
-  bottom: 180px; 
+  bottom: 180px;
 }
 
 .produtz:hover img {
-  filter: brightness(
-    0.8
-  ); 
+  filter: brightness(0.8);
 }
 
 .lateral {
@@ -686,9 +700,9 @@ button {
   bottom: 0;
   padding: 20px;
   margin-left: -20px;
-  width: 23%; 
+  width: 23%;
   background-color: rgb(255, 255, 255);
-  z-index: 1010; 
+  z-index: 1010;
 }
 
 .total-preco {
@@ -735,125 +749,133 @@ button {
 
 
 
-@media screen and (max-width: 926px){
-  .imagem img,.texto2, .pagina2{
+@media screen and (max-width: 926px) {
+
+  .imagem img,
+  .texto2,
+  .pagina2 {
     display: none;
   }
 
   .transparent-section {
-  width: 90%;
-  height: 85%;
-  right: 5%;
+    width: 90%;
+    height: 85%;
+    right: 5%;
+  }
+
+  .login-form h1 {
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+
+  .login-form label {
+    font-size: 23px;
+    margin-left: 10px;
+    color: var(--cor-secundaria);
+  }
+
+  .login-form {
+    width: 85%;
+    max-width: 400px;
+    margin-left: 150px;
+    margin-top: -80px;
+  }
+
+  .password-container {
+    position: relative;
+    width: 110%;
+  }
+
+  .forgot-password {
+    color: var(--main-color);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .remember-container input {
+    margin-right: -5px;
+  }
+
+  .login-form button {
+    margin-top: 0;
+  }
+
+  .divider {
+    margin-top: 2px;
+  }
+
+  .social-login {
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .termos {
+    position: fixed;
+    top: 94%;
+    left: 15%;
+  }
+
+
+  .favoritos {
+    width: 100%;
+    right: -100%;
+  }
+
+  .topo {
+    width: 100%;
+  }
+
+  .favoritos .preco-container {
+    width: 100%;
+  }
+
+  .compras {
+    width: 100%;
+    right: -100%;
+  }
+
+  .preco-container {
+    width: 100%;
+  }
+
+  /* pesquisar */
+  .search-box input {
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  .search-box button {
+    margin-top: 4px;
+  }
+
+  #close-search-box {
+    top: 42px;
+    right: 10px;
+  }
+
+  #close-search-box:hover {
+    color: var(--main-color);
+  }
+
+  #close-search-box i {
+    font-size: 35px;
+  }
+
+
+  /* z-index em geral pra ser clicavel */
+  button,
+  .social-login button,
+  .create-account a,
+  .forgot-password,
+  .login-form,
+  .login-form label {
+    position: relative;
+    z-index: 1002;
+  }
+
 }
 
-.login-form h1 {
-  margin-top: 150px;
-  margin-left: 20px;
-}
-
-.login-form label {
-  font-size: 23px;
-  margin-left: 10px;
-  color: var(--cor-secundaria);
-}
-
-.login-form {
-  width: 85%;
-  max-width: 400px;
-  margin-left: 150px;
-  margin-top: -80px;
-}
-
-.password-container {
-  position: relative;
-  width: 110%;
-}
-
-.forgot-password {
-  color:var(--main-color);
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.remember-container input {
-  margin-right: -5px;
-}
-
-.login-form button {
-  margin-top: 0;
-}
-
-.divider {
-  margin-top: 2px;
-}
-
-.social-login {
-  text-align: center;
-  margin-top: 4px;
-}
-
-.termos {
-  position: fixed;
-  top: 94%;
-  left: 15%;
-}
-
-
-.favoritos {
-  width: 100%;
-  right: -100%;
-}
-
-.topo {
-  width: 100%;
-}
-
-.favoritos .preco-container {
-  width: 100%; 
-}
-
-.compras {
-  width: 100%;
-  right: -100%;
-}
-
-.preco-container {
-  width: 100%;  
-}
-
-/* pesquisar */
-.search-box input {
-  width: 90%;
-  margin-left: 10px;
-}
-
-.search-box button {
-  margin-top: 4px;
-}
-
-#close-search-box {
-  top: 42px;
-  right: 10px;
-}
-
-#close-search-box:hover{
-  color: var(--main-color);
-}
-
-#close-search-box i {
-  font-size: 35px;
-}
-
-
-/* z-index em geral pra ser clicavel */
-button, .social-login button, .create-account a, .forgot-password, .login-form, .login-form label {
-  position: relative;
-  z-index: 1002; 
-}
-
-}
-
-@media screen and (min-width: 927px) and (max-width: 1366px){
+@media screen and (min-width: 927px) and (max-width: 1366px) {
   .imagem img {
     width: 600px;
     height: 600px;
@@ -884,11 +906,11 @@ button, .social-login button, .create-account a, .forgot-password, .login-form, 
   }
 
   .favoritos .preco-container {
-    width: 28%;  
+    width: 28%;
   }
 
   .preco-container {
-    width: 28%; 
+    width: 28%;
   }
 
   .compras {
